@@ -1,0 +1,85 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = [
+  {
+    title: "WebClicker++",
+    description: "A web-based iClicker replacement with Q&A and professor tools.",
+    githubLink: "https://github.com/CSES-Dev/webclicker-plusplus",
+    imageSrc: "/src/images/webclicker.jpg",
+    imageAlt: "Image of WebClicker project",
+    quote: "Innovating attendance"
+  },
+  {
+    title: "Opportune",
+    description: "A social platform connecting UCSD students & alumni for job searches, internships, & analytics.",
+    githubLink: "https://github.com/CSES-Open-Source/Opportune",
+    imageSrc: "/src/images/opportune.jpg",
+    imageAlt: "Image of Opportune project",
+    quote: "Empowering students in tech"
+  },
+  {
+    title: "CAIDA",
+    description: "Tool for research paper identification using CAIDA datasets, reducing metadata collection time by 30%.",
+    githubLink: "https://www.caida.org/",
+    imageSrc: "/src/images/caida.jpg",
+    imageAlt: "Image of CAIDA website",
+    quote: "Reinventing data collection"
+  },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ulises - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/css/portfolio.css" />
+  </head>
+  <body>
+    <!-- NAVBAR + HERO SECTION -->
+    <header class="hero">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h1>Ulises</h1>
+        <p>Welcome to my portfolio site!</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="portfolio" class="portfolio-section">
+        <h2>Portfolio / Projects</h2>
+        <div class="project-grid">
+          {projects.map((project) => (
+            <ProjectCard {...project} />
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <footer>
+				<section id="contact" class="contact-section">
+					<h2>Connect</h2>
+					<div class="contact-icons">
+						<a href="https://www.linkedin.com/in/ulises-salinas/" target="_blank" rel="noopener">
+							<img src="/src/images/linkedin-icon.svg" alt="LinkedIn" width="28" height="28">
+						</a>
+						<a href="https://github.com/ulises0516" target="_blank" rel="noopener">
+							<img src="/src/images/github-icon.svg" alt="GitHub" width="28" height="28">
+						</a>
+						<a href="mailto:usalinas595@gmail.com">
+							<img src="/src/images/email-icon.svg" alt="Email" width="28" height="28">
+						</a>
+					</div>
+				</section>
+      <p>&copy; 2024 Ulises Blog</p>
+    </footer>
+  </body>
+</html>

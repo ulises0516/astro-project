@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.hero {
+  min-height: 60vh;
+  background: url("/src/assets/background.svg") no-repeat center center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000; 
+  padding: 0.4rem 0.75rem;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+.main-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+  text-align: center;
+  color: #000000;
+  margin-top: 3rem;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.portfolio-section {
+  padding: 2rem 1rem;
+}
+.portfolio-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.project-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-card h3 cite a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.project-card p {
+  margin: 0 1rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.project-card blockquote {
+  margin: 0 1rem 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #ff6f61; 
+  font-style: italic;
+  color: #666;
+}
+.project-card figure {
+  margin: 0;
+}
+.project-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 150px; 
+}
+
+.contact-section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.contact-section h2 {
+  margin-bottom: 1rem;
+}
+.contact-icons {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+}
+.contact-icons img {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.contact-icons img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding: 1rem;
+  margin-top: 2rem;
+}

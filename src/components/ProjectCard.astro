@@ -1,0 +1,25 @@
+---
+const { title, description, githubLink, imageSrc, imageAlt, quote } = Astro.props;
+---
+
+<article class="project-card">
+  <h3>
+    {title}
+    <cite>
+      <a href={githubLink} target="_blank" rel="noopener">
+        <picture>
+          <source srcset="/src/images/github-icon.webp" type="image/webp">
+          <source srcset="/images/github-icon.svg" type="image/svg+xml">
+          <img src="/src/images/github-icon.svg" alt="GitHub" width="24" height="24">
+        </picture>
+      </a>
+    </cite>
+  </h3>
+  <p>{description}</p>
+  <blockquote>
+    <p>{quote}</p>
+  </blockquote>
+  <figure>
+    <img src={imageSrc} alt={imageAlt} class="project-img"/>
+  </figure>
+</article>
